@@ -3,7 +3,7 @@ import { useCookies } from 'react-cookie'
 
 const PrivateRoutes = () => {
   const [cookies, setCookie, removeCookie] = useCookies(['token'])
-  let auth = false
+  let auth = true
 
   if (cookies.token) {
     console.log(cookies.token)

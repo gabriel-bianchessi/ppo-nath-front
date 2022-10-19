@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   const { register, handleSubmit, watch , formState: {errors} } = useForm()
@@ -12,7 +13,7 @@ export default function Login() {
       {errors.email && <span>This field is required</span>}
       <input type="password" placeholder="Password" {...register('password', {required: true})} />
       {errors.password && <span>This field is required</span>}
-      <input type="submit" />
+      <Link to="/">Login</Link>
     </form>  
   </>)
 }
